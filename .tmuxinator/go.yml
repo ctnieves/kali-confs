@@ -1,0 +1,23 @@
+# vim:ft=ansible:
+name: go
+
+windows:
+  - main:
+      layout: 7a3c,362x97,0,0{225x97,0,0,0,136x97,226,0[136x48,226,0,2,136x48,226,49,7]}
+      #we change the directory here because tmuxinator expands the alias and
+      #makes a really long path
+      panes:
+        - vim:
+          - cd ~/go/src/github.com/ctnieves
+          - vim
+        - upper:
+          - cd ~/go/src/github.com/ctnieves
+          - clear
+        - lower:
+          - cd ~/go/src/github.com/ctnieves
+          - clear
+
+  - cli:
+      panes:
+          - cd ~/go/src/github.com/ctnieves
+          - clear

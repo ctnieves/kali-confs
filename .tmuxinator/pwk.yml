@@ -1,0 +1,52 @@
+# vim:ft=ansible:
+
+name: pwk
+on_project_start: ~/Desktop/mount-shared-folders.sh
+
+windows:
+  - main:
+      #layout: 8837,311x78,0,0{278x78,0,0[278x47,0,0{169x47,0,0,0,108x47,170,0,3},278x30,0,48{169x30,0,48,4,108x30,170,48,5}],32x78,279,0,6}
+      layout: 8d6e,311x78,0,0{273x78,0,0[273x49,0,0{156x49,0,0,4,116x49,157,0,12},273x28,0,50{156x28,0,50,10,116x28,157,50,11}],37x78,274,0,5}
+      panes:
+          - one:
+          - two:
+          - three:
+          - four:
+          - five:
+      panes:
+        - one:
+          - cd ~/OSCP/lab/ && clear
+        - two:
+          - cd ~/OSCP/lab/ && clear
+        - three:
+          - cd ~/OSCP/lab/ && clear
+        - four:
+          - cd ~/OSCP/lab/ && clear
+        - five:
+          - cd ~/OSCP/lab/ && clear
+          - vim /etc/hosts
+
+  - secondary:
+      layout: 3be0,311x78,0,0{197x78,0,0[197x39,0,0,1,197x38,0,40{98x38,0,40,23,98x38,99,40,24}],61x78,198,0,22,51x78,260,0,8}
+      panes:
+        - one:
+          - cd ~/OSCP/lab/ && clear
+        - two:
+          - cd ~/OSCP/lab/ && clear
+        - three:
+          - cd ~/OSCP/lab/ && clear
+        - four:
+          - cd ~/OSCP/lab/ && clear
+
+  - connections:
+      layout: e468,311x78,0,0[311x14,0,0,8,311x63,0,15,9]
+      panes:
+        - vpn:
+          - cd ~/OSCP/lab-connection && clear
+          - openvpn ./OS-38584-PWK.ovpn
+        - winvm:
+          - cd ~/OSCP/lab-connection
+          - ssh -i ./irssipi 192.168.30.61
+          - screen -r
+
+
